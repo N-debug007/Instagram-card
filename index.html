@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="top">
+          <div class="userinfo">
+            <div class="profile_img">
+              <img src="user.jpg" width="35" height="35" class="cover" />
+            </div>
+            <h3>
+              Maria Rossi<br />
+              <span>Lun, 13/12/2021</span>
+            </h3>
+          </div>
+          <div>
+            <img src="dot.png" class="dot" />
+          </div>
+        </div>
+        <div class="imgCt">
+          <img src="catmodel.jpg" class="img1" width="100%" height="150px" />
+        </div>
+        <div class="actionBtns">
+          <div class="left">
+            <img src="heart.png" class="heart" onclick="likeButton()" />
+            <img src="comment.png" />
+            <img src="share.png" />
+          </div>
+          <div class="right">
+            <img src="bookmark.png" alt="" />
+          </div>
+        </div>
+        <h4 class="likes">6,851 likes</h4>
+        <h4 class="message">
+          <b>Kane Brown</b> My cat is such a cool little fella...<span
+            >#coolcat</span
+          ><span>#thecoollife</span>
+        </h4>
+        <h4 class="comments">View all 583 comments</h4>
+        <div class="addComments">
+          <div class="userImg">
+            <img src="user.jpg" width="15" height="15" class="user" />
+          </div>
+          <input type="text" class="text" placeholder="Add a comment..." />
+        </div>
+        <h5 class="postTime">13 hours ago</h5>
+      </div>
+      <script>
+        function likeButton() {
+          let heart = document.querySelector(".heart");
+          let likes = document.querySelector(".likes");
+          if (heart.src.match("heart.png")) {
+            heart.src = "heart_red.png";
+            likes.innerHTML = "6,851 likes";
+          } else {
+            heart.src = "heart.png";
+            likes.innerHTML = "6,850 likes";
+          }
+        }
+      </script>
+
+      <div class="box">
+        <div class="top">
+          <div class="userinfo">
+            <div class="profile_img">
+              <img src="download.jpg" width="35" height="35" class="cover" />
+            </div>
+            <h3>
+              Elisa Miao<br />
+              <span>Lun, 17/12/2021</span>
+            </h3>
+          </div>
+          <div>
+            <img src="dot.png" class="dot" />
+          </div>
+        </div>
+        <div class="imgCt">
+          <img src="pexels-photo.jpg" class="img1" width="100%" height="150px" />
+        </div>
+        <div class="actionBtns">
+          <div class="left">
+            <img src="heart.png" class="heart2" onclick="likeButton2()" />
+            <img src="comment.png" />
+            <img src="share.png" />
+          </div>
+          <div class="right">
+            <img src="bookmark.png" alt="" />
+          </div>
+        </div>
+        <h4 class="likes2">83,296 likes</h4>
+        <h4 class="message">
+          <b>Jenna Frumes</b> Wishing you all a wonderful week.<span
+            >#goodvibes</span
+          ><span>#shine</span>
+        </h4>
+        <h4 class="comments">View all 45k comments</h4>
+        <div class="addComments">
+          <div class="userImg">
+            <img src="download.jpg" width="15" height="15" class="user" />
+          </div>
+          <input type="text" class="text" placeholder="Add a comment..." />
+        </div>
+        <h5 class="postTime">28 minutes ago</h5>
+      </div>
+      <script>
+        function likeButton2() {
+          let heart2 = document.querySelector(".heart2");
+          let likes2 = document.querySelector(".likes2");
+          if (heart2.src.match("heart.png")) {
+            heart2.src = "heart_red.png";
+            likes2.innerHTML = "83,296 likes";
+          } else {
+            heart2.src = "heart.png";
+            likes2.innerHTML = "83,295 likes";
+          }
+        }
+      </script>
+      </div>
+    </div>
+  </body>
+</html>
